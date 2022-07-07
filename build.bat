@@ -1,5 +1,7 @@
-del ".\TehsTrails.taco"
+:: You must replace YOUR PACKS NAME and YOUR XMLS NAME in order to use
 
-"%ProgramFiles%\WinRAR\WinRAR.exe" a -afzip -ep1 -ibck -r -y ".\TehsTrails.zip" ".\Data" ".\TehsTrails.xml"
+del ".\<YOUR PACKS NAME>.taco"
 
-rename "TehsTrails.zip" "TehsTrails.taco"
+"%ProgramFiles%\WinRAR\WinRAR.exe" a -afzip -ep1 -ibck -r -y ".\<YOUR PACKS NAME>.zip" ".\Data" ".\<YOUR XMLS NAME>.xml"
+
+rename "<YOUR PACKS NAME>.zip" "<YOUR PACKS NAME>.taco"

@@ -9,13 +9,13 @@
         <MarkerCategory name="exmarker" DisplayName="Example Marker" iconFile="Data/ExamplePack/Markers/ExampleMarker.png"/>
         
         <!--This is the start of a marker sub-category-->
-        <MarkerCategory name="ec" DisplayName="Example Marker Category - Markers">
+        <MarkerCategory name="m" DisplayName="Markers">
             <!--This is an example of a nested marker-->
             <MarkerCategory name="exm2" DisplayName="Example Marker 2" iconFile="Data/ExamplePack/Markers/ExampleMarker2.png"/>
         </MarkerCategory>
 
         <!--This is another marker sub-categoy-->
-        <MarkerCategory name="ec2" DisplayName="Example Marker Category 2 - Trails">
+        <MarkerCategory name="t" DisplayName="Trails">
             <!--This is an example of a trail nested in a category-->
             <MarkerCategory name="extrail" DisplayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png"/>
         </MarkerCategory>

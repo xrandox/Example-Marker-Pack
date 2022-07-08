@@ -19,6 +19,8 @@ This pack is meant to be a guide/follow-along for new pack makers to get their f
    * [How I Trail - The Process](#how-i-trail---the-process)
    * [Trailing in TrlTool](#trailing-in-trltool)
    * [Adding Trails To Your Pack](#adding-trails-to-your-pack)
+* [Closing Remarks](#closing-remarks)
+* [Acknowledgements](#acknowledgements)
 
 # Getting Started
 
@@ -356,3 +358,19 @@ And with that, you can run build.bat and you now have your first trail!
 
 ***
 
+# Closing Remarks
+Overall, pack making is more time consuming than it is hard. Contrary to how it may seem the first time you open up a giant XML, it's really not that technically challenging to do. It just takes a lot of time and dedication to put together a good end product, and there is an initial learning curve that most people don't quite get over. Hopefully this little guide well help some more people get over that first hump and onto creating some more awesome packs for the community. 
+
+I will not be frequenting this repo, so please don't write on the issue board here for questions or comments etc. Instead, a much better and more reliable way to get ahold of me is by joining the [Teh's Trails Discord](https://discord.gg/bJV6VXT). Feel free to make use of our help desk and ask any questions you might have. I'm generally available most of the day, and always love to help out fresh blood. 
+
+Cheers!
+
+***
+
+# Acknowledgements
+* None of this would have been possible without the original creation of TacO by **BoyC**. Big thanks to him. 
+* Blish Hud has revolutionized the overlay game again and again and continues to foster more and more progress. With his various tools and his amazing overlay I likely would have stopped trailing long ago, so I can't thank **Freesnow** enough for his work.
+* The many **contributors and trail testers in the Tehs Trails discord** have continously pushed me to refine my work and keep producing content. Their support has meant the world to keeping the project going. 
+* Special thanks to **zotmer**, the other main developer of Tehs Trails who has provided countless improvements to my pack and always keeps me on my toes
+* And thanks to **all the other pack developers**, who I'm sure through some way or another have improved my workflow and given me more reasons to keep pushing the limit.
+* **And to you, future pack developer!** For having the heart to want to provide content for other people, and for having the willpower to get to this point in the guide 😆

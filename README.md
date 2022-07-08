@@ -15,6 +15,10 @@ This pack is meant to be a guide/follow-along for new pack makers to get their f
    * [How to Edit Existing Markers](#how-to-edit-existing-markers)
    * [Proper Attribute Assigning and Category Heirarchy](#proper-attribute-assigning-and-category-heirarchy)
 * [Trail Time](#trail-time)
+   * [Trailing with TacO](#trailing-with-taco)
+   * [How I Trail - The Process](#how-i-trail---the-process)
+   * [Trailing in TrlTool](#trailing-in-trltool)
+   * [Adding Trails To Your Pack](#adding-trails-to-your-pack)
 
 # Getting Started
 
@@ -213,12 +217,12 @@ Now that you know how to place markers, you need to know how to find them. For t
 <!-- begin POIs! this is where are markers are at -->
 <POIs>
 <!-- Every Marker starts with POI -->
-<!-- |   MapID tells us what map that marker is on. You don't necessarily need to know what map ID is which. In this case, 50 is Lion's Arch
-<!-- |   |        xpos/ypos/zpos are the xyz coordinates that the marker is located at. They are truncated to 6 digits and can be negative and positive
-<!-- |   |          |               |              |   the type attribute tells us what category this marker belongs to, using the name attributes in MarkerCategory
-<!-- |   |          |               |              |              | the GUID attribute is a unique identifier that is used for tracking certain behaviors(hide/unhide)
-<!-- |   |          |               |              |              |                  |
-<!-- V   V          V               V              V              V                  V
+<!-- |   MapID tells us what map that marker is on. You don't necessarily need to know what map ID is which. In this case, 50 is Lion's Arch -->
+<!-- |   |        xpos/ypos/zpos are the xyz coordinates that the marker is located at. They are truncated to 6 digits and can be negative and positive -->
+<!-- |   |          |               |              |   the type attribute tells us what category this marker belongs to, using the name attributes in MarkerCategory -->
+<!-- |   |          |               |              |              | the GUID attribute is a unique identifier that is used for tracking certain behaviors(hide/unhide) -->
+<!-- |   |          |               |              |              |                  | -->
+<!-- V   V          V               V              V              V                  V -->
   <POI MapID="50" xpos="-563.204" ypos="26.6099" zpos="94.5559" type="ep.exmarker" GUID="fEvVAceiaUanEsb/Rrea6A=="/>
 </POIs>
 ```
@@ -266,3 +270,89 @@ This is also why setting up a good category heirarchy for your pack is important
 ***
 
  # Trail Time
+
+### Trailing with TacO
+Now, I will make it entirely clear that it is 100% possible to do everything with TacO's trail editor. Some people may even prefer it. I on the other hand, am not such a big fan. The selling point -- and biggest fault -- of TacO's trail recorder is that it records _everything_ you do. You can just turn it on and be on your merry way recording a trail. However, it records _everything_. That bump you hit while going max speed on a beetle and sent you flying? Yep. Every time you leap on your raptor? Yep. Get knocked around by a mob while trying to record a detailed trail? Yep. Every twist and turn while going mach jesus on a griffon? You betcha. And this is my issue with TacO's editor. Can you get nice trails that are smooth and rounded and pretty? Absolutely. Does it take forever and a day of ironing out bumps and jumps and everything in between? Absolutely.
+
+So, I will briefly touch on how to record with TacO, and then I will move on to using TrlTool and how to use them in combination for the best effect. 
+
+For TacO, lets take a look at the trail editing buttons quickly:
+![trail editing buttons](https://imgur.com/sgO87sD.png)
+1. This starts the recording of a new trail. Pressing it again will dump everything you've recorded without saving anything. DONT PRESS AGAIN IN THE MIDDLE OF A TRAIL WITHOUT EXPORTING.
+2. The pause button. This pauses the recording of the trail. You can have varying success with Pause -> Move -> Unpause -> Repeat. This gives you straight lines from point to point without worrying about what happens in between unpausing. It's how I recorded trails prior to TrlTool. Also allows you to use #3
+3. Start a new trail section. This will create a break in the trail, meaning you can end a trail at one point, then create a new section of the same trl somewhere else without connecting the two. This means you dont have to make a bunch of different little trails every time you want to waypoint or something. 
+4. Delete selected trail segment or last segment if no trail segment is selected. Pretty self-explanatory.
+5. Save trail to .trl. **This is the most important button when trailing with TacO. SAVE OFTEN.** Do not make the mistake of being nearly done with a trail and then losing all progress because you accidentally hit start/stop instead of pause/unpause and you never exported. I have done it. It sucks. A lot. **SAVE ALL THE TIME**
+6. Load an existing .trl. Self-explanatory. You must load a .trl to edit them, you cannot edit trl's inside of packs.
+7./8. Change your selected trail segment. Somewhat useful if you want to go back in a trail to make a routing change or something. Not used much in my experience.
+
+And that's really it for trailing with TacO. Once you export the trail you'll refer to the later section on how to add it to your pack, but TacO is pretty simple to use as far as trails goes. 
+
+***
+
+### How I Trail - The Process
+If you don't care about being efficient, or you aren't trailing for something that really cares about speed or precision, then please feel free to skip to the next section. I'm including this because I often get asked it, and so I figured I might as well touch on it. Please understand this is coming from a speedrunner who will literally grind 10 different routes just to find one that save 8 seconds; take it for what you will. If it's something that you find value in please feel free to adopt it and make it your own. If you don't care for it, find your own way! Not everyone has to be a stopwatch racer.
+
+With that said, here is essentially my step-by-step:
+1. Trails get routed on paper first. Typically, I screenshot the map I'm working on, bring it into Photoshop, GIMP, or even the default windows photos + draw tool, and start layering on pathing. I prefer GIMP or PS since it allows me to create layers and draw multiple routes/make adjustments as I try things out. This is mostly by eye, and is pretty rough and usually ends up getting a lot of changes.
+2. Next I go and physically run the route in-game. I don't typically 'break trail' during this as I find that I usually have to make a decent amount of changes as I go and try to follow my laid out lines. I add new layers onto the PS/GIMP picture to make route changes. This is the stage where I do a lot of testing. Highly recommend picking up livesplit if you want to get serious about min-maxing your routes. Time different routes, using different mounts, etc. Always take advantage of high cliffs for griff dives or long relatively flat ground for beetle. 
+3. After I get pretty happy with the route, then I go and break trail for the first time, following the route I decided on in testing. I typically do the routing with TrlTool, importing it into TacO every now and then to make sure I didnt fluff something up horribly. I work on long trails, so if you're doing shorter trails it may not be necessary. TrlTool is why my trails are very sharp and pointy. I personally prefer that aesthetic. Some don't, so I guess you'll have to try it out and see. BHUD may have a trail smoother at some point in the future too.
+4. After first trail is down, then I go and place markers along the trail. During this time I'm looking for any obvious issues with the trail, and fixing them while I do markers. Markers tend to take a while.
+5. Finally, I do one last pass with everything complete and markers added to "certify" the trail. If it meets all my expectations and I see no further problems, it's ready to go and on to the next trail.
+
+***
+
+### Trailing in TrlTool
+So I keep talking about this mysterious TrlTool, what the heck is it?
+
+Well, as said in the Useful Tools section, TrlTool is a small program created by Freesnow to edit trails manually. It was never really intended to be used to create trails, but I liked it so much that I pretty much adapted it just for that use. It's super simple, so lets break it down real quick:
+![freesnows trltool](https://imgur.com/WSIK6CT.png)
+1. Open a .trl file. If you have an existing one you want to edit, this is how you open it.
+2. Save .trl. If you've opened a .trl, this will overwrite the one you opened. 
+3. Save a copy, this will give you the option to save a new .trl file instead of overwriting the one you open. Highly recommend doing this if you are editing a pre-existing trail. This can also be used if you're making a trail from scratch and need to save it.
+4. Insert Map - This is used to start a new trail segment. The start of a trl file always starts with the Map ID, and whenever you need to make a new trail segment you need to insert the map again to show a break in the trail.
+5. Insert Vector - This inserts a vector, or in TacO terms, a trail segment. This is hardcoded to `;` as a hotkey. Recommend binding a mousekey to that if you intend to create trails with it, works wonders.
+6. Checking this box will make the window also on top. Useful if you have limited screen space and want to layer it on your game or something.
+7. This is an example of 'Insert Map'. It will always be `M` followed by the map ID. In this case, it is Lion's Arch, which is ID 50.
+8. Every line after this is a vector, stored as **X Z Y**. This is important to distinguish from the xml, which is X Y Z. Again the coordinates are stored as X Z Y.
+
+As you can see, TrlTool is very simplistic and 'rudimentary'. However, if you want straight and sharp lines, it's much easier to just tap `;` every few seconds than mess with pausing and unpausing TacO. It's also a lot easier to go in between specific points and create new segments of trail, or remove large segments at a time. 
+
+***
+
+### Adding Trails To Your Pack
+Now that we've discussed different ways to create trails, we need to talk about how to add them to your pack. Luckily, it's relatively easy. First of all, we need to take the generated `Trail.trl` and put it in our `\Data\` folder. Now I typically organized my data folders so the trail path is something along the lines of `\Data\ExamplePack\Trails\Trail.trl`. How exactly you organized your data file structure honestly doesn't matter to anyone but you. Do it however you want, no one else is ever going to see it.
+
+Anyways, after throwing your freshly minted trail into the Data folder, you need to add a marker category and a Trail entry for it. We added a marker category already, so we get need to add a trail entry. Together, it would look something like this:
+```xml
+<OverlayData>
+    <MarkerCategory name="ep" DisplayName="Example Pack">
+
+
+        <MarkerCategory name="m" DisplayName="Markers" fadeFar="3500">
+            <MarkerCategory name="exm" DisplayName="Example Marker" iconFile="Data/ExamplePack/Markers/ExampleMarker.png"/>
+            <MarkerCategory name="exm2" DisplayName="Example Marker 2" iconFile="Data/ExamplePack/Markers/ExampleMarker2.png" fadeFar="3000"/>
+        </MarkerCategory>
+
+        <MarkerCategory name="t" DisplayName="Trails">
+            <MarkerCategory name="extrail" DisplayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png"/>
+        </MarkerCategory>
+        
+    </MarkerCategory>
+  
+    <POIs>
+      <POI MapID="50" xpos="-563.204" ypos="26.6099" zpos="94.5559" type="ep.exmarker" GUID="fEvVAceiaUanEsb/Rrea6A=="/>
+<!--   All trails start with a Trail prefix -->
+<!--     |   the type attribute, just like in markers, leads to the category it belongs to in the MarkerCategory heirarchy, according to name  -->
+<!--     |     |                 trailData gives us the path to the .trl file with the trail's data  -->
+<!--     |     |                    |  -->
+<!--     V     V                    V  -->
+      <Trail type="ep.t.extrail" trailData="Data/ExamplePack/Trails/ExampleTrail.trl"/>
+    </POIs>
+</OverlayData>
+```
+
+And with that, you can run build.bat and you now have your first trail!
+
+***
+

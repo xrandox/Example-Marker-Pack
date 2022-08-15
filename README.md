@@ -152,11 +152,12 @@ The final step to making a usable XML is to add in the actual marker and trail c
         </MarkerCategory>
 
         <MarkerCategory name="t" DisplayName="Trails">
-            <!--This is an example of a trail nested in a category-->
-            <!--                                        Trails use the texture attribute instead of iconFile -->
-            <!--                                                          |   -->
-            <!--                                                          V   -->
-            <MarkerCategory name="extrail" DisplayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png"/>
+            <!--This is an example of a trail nested in a category
+                 |                                             Trails use the texture attribute instead of iconFile 
+				         |                                                       |                                 Trails also require fadeNear and fadeFar
+				         |                                                       |                                             |               |
+				         V                                                       V                                             V               V  --> 
+            <MarkerCategory name="extrail" DisplayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png" fadeNear="3000" fadeFar="3500"/>
         </MarkerCategory>
         
     </MarkerCategory>

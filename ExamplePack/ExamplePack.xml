@@ -1,35 +1,23 @@
 <OverlayData>
-    <!--Comments can be made by enclosing them in these symbols, use them to keep your xml organized!-->
-    <!--Whitespace doesn't matter in XML, and can also be used to increase readability for your editing purposes-->
 
-    <!--Start of your category hierarchy-->
-    <MarkerCategory name="ep" DisplayName="Example Pack">
-
-        <!--This is a marker with no sub-category or special attributes-->
-        <MarkerCategory name="exmarker" DisplayName="Example Marker" iconFile="Data/ExamplePack/Markers/ExampleMarker.png"/>
-        
-        <!--This is the start of a marker sub-category-->
-        <MarkerCategory name="m" DisplayName="Markers">
-            <!--This is an example of a nested marker-->
-            <MarkerCategory name="exm2" DisplayName="Example Marker 2" iconFile="Data/ExamplePack/Markers/ExampleMarker2.png"/>
-        </MarkerCategory>
-
-        <!--This is another marker sub-categoy-->
-        <MarkerCategory name="t" DisplayName="Trails">
-            <!--This is an example of a trail nested in a category-->
-            <MarkerCategory name="extrail" DisplayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png"/>
-        </MarkerCategory>
-
-    </MarkerCategory>
-
-    <!--Start of your POIs-->
-    <POIs>
-        <!--This is an example of a marker POI in Gendarran Fields-->
-        <POI MapID="24" xpos="0" ypos="0" zpos="0" type="ep.exmarker" GUID="sRw/nFd4Uk6iACfoGIPjYg=="/>
-
-        <!--This is an example of a trail (also in Gendarran Fields)-->
-        <Trail type="ep.ec2.extrail" trailData="Data/ExamplePack/Trails/ExampleTrail.trl"/>
-    </POIs>
-
+	<MarkerCategory name="ep" displayName="Example Pack">
+		
+		<MarkerCategory name="m" displayName="Markers" fadeNear="3000" fadeFar="3500">
+			<MarkerCategory name="exm" displayName="Example Marker" iconFile="Data/ExamplePack/Markers/ExampleMarker.png"/>
+			<MarkerCategory name="exm2" displayName="Example Marker 2" iconFile="Data/ExamplePack/Markers/ExampleMarker2.png" fadeNear="3500" fadeFar="4000"/>
+		</MarkerCategory>
+		
+		<MarkerCategory name="t" displayName="Trails">
+			<MarkerCategory name="ext" displayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png"/>
+		</MarkerCategory>
+		
+	</MarkerCategory>
+	
+	<POIs>
+		<POI MapID="24" xpos="232.357" ypos="2.67108" zpos="-459.649" type="ep.m.exm2" GUID="cJ/ybo2xk0O3sa8W7QBlYQ=="/>
+		<POI MapID="24" xpos="229.859" ypos="2.74695" zpos="-465.586" type="ep.m.exm2" GUID="7ffVA0BZUEyyQUPU+pbzcg=="/>
+		<POI MapID="24" xpos="228.092" ypos="3.7002" zpos="-460.307" type="ep.m.exm" GUID="A0yonm/Sb0S+r3EZgrgD4g=="/>
+		<Trail type="ep.t.ext" trailData="Data/ExamplePack/Trails/ExampleTrail.trl"/>
+	</POIs>
 
 </OverlayData>

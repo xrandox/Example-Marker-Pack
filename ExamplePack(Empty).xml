@@ -1,0 +1,83 @@
+<!-- 
+	Welcome to Teh's Example Pack! 
+	Feel free to modify this file however you want to customize it for your own pack 
+	Comments can be made by enclosing them in these symbols, use them to keep your XML organized! 
+	Whitespace doesn't matter in XML, and can also be used to increase readability for your editing purposes 
+-->
+
+<!-- Everything for your pack should be contained inside of this overlay data element -->
+<OverlayData>
+
+
+    <!-- 
+	**************************************************************************** 
+	*                                                                          *
+	*                            MARKER CATEGORIES                             *
+	*                                                                          *
+	****************************************************************************
+
+	This is where the organization for your pack happens, and where you can assign attributes on a categorical level
+	If you're looking for information on attributes, the best place to start is: https://blishhud.com/docs/markers/development/attributes/
+
+
+	This is your main category, e.g. your entire pack goes inside of this 
+	 |    All marker categories have at least two attributes 
+	 |         The 'name' attribute is how the category is referenced internally (in the 'type' attribute of a marker)
+     |               | The 'displayName' attribute is what will be shown to the user when looking through categories
+	 |               |            | 
+     V               V            V -->
+	<MarkerCategory name="" displayName="">
+	
+		<!-- This is an example of a sub-category -->
+		<MarkerCategory name="" displayName="">
+		
+			<!-- This is an example of an actual marker
+			      |    Markers have an additional 'iconFile' attribute, which is the path to what image will be used for that marker
+			      |                                  |               Markers are closed with a '/' because they do not contain other markers
+			      |                                  |                              |   
+			      V                                  V                              V   -->
+			<MarkerCategory name="" displayName="" iconFile="Data/YOUR/FILE/PATH.png"/>
+			
+		</MarkerCategory>
+		
+			<!-- This is an example of a trail category
+				  |                                  Trails use the texture attribute instead of iconFile
+				  |                                                    |     Trails also require fadeNear and fadeFar, which are when the trail starts to fade and completely disappears, respectively
+				  |                                                    |              |               |
+				  V                                                    V              V               V  --> 
+		<MarkerCategory name="" displayName="" texture="Data/YOUR/FILE/PATH.png" fadeNear="3000" fadeFar="3500"/>
+		
+	</MarkerCategory>
+	
+	
+	<!-- 
+	**************************************************************************** 
+	*                                                                          *
+	*                           MARKERS AND TRAILS                             *
+	*                                                                          *
+	****************************************************************************
+	
+	All of your POIs (markers) and Trails go inside this POIs element 
+	 |
+     V	 -->
+	<POIs>
+	
+	<!-- Every Marker starts with POI and has at least 6 attributes (technically 'type' can be left out, but shouldn't be)
+         |  'MapID' tells us what map that marker is on
+         |     |     'xpos/ypos/zpos' are the xyz coordinates that the marker is located at. They are truncated to 6 digits and can be negative and positive
+         |     |        |       |      |     'type' tells us what MarkerCategory this marker belongs to
+         |     |        |       |      |        |    'GUID' is a unique identifier that is used for tracking certain behaviors(hide/unhide)
+         |     |        |       |      |        |      |
+         V     V        V       V      V        V      V -->
+        <POI MapID="" xpos="" ypos="" zpos="" type="" GUID=""/>
+	
+	<!-- Every Trail starts with Trail and has at least 2 attributes (technically 'type' can be left out, but shouldn't be)
+	       |  'type' is the same as with markers
+		   |          'trailData' is a file path to the .trl file that should be used for this trail
+		   |               |
+	       V               V                               -->
+        <Trail type="" trailData="Data/YOUR/FILE/PATH.trl"/>
+		
+	</POIs>
+
+</OverlayData>

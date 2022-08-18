@@ -152,11 +152,12 @@ The final step to making a usable XML is to add in the actual marker and trail c
         </MarkerCategory>
 
         <MarkerCategory name="t" DisplayName="Trails">
-            <!--This is an example of a trail nested in a category-->
-            <!--                                        Trails use the texture attribute instead of iconFile -->
-            <!--                                                          |   -->
-            <!--                                                          V   -->
-            <MarkerCategory name="extrail" DisplayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png"/>
+            <!--This is an example of a trail nested in a category
+                 |                                             Trails use the texture attribute instead of iconFile 
+				         |                                                       |                                 Trails also require fadeNear and fadeFar
+				         |                                                       |                                             |               |
+				         V                                                       V                                             V               V  --> 
+            <MarkerCategory name="extrail" DisplayName="Example Trail" texture="Data/ExamplePack/Markers/Trail.png" fadeNear="3000" fadeFar="3500"/>
         </MarkerCategory>
         
     </MarkerCategory>
@@ -368,8 +369,8 @@ Cheers!
 ***
 
 # Acknowledgements
-* None of this would have been possible without the original creation of TacO by **BoyC**. Big thanks to him. 
 * Blish Hud has revolutionized the overlay game again and again and continues to foster more and more progress. With his various tools and his amazing overlay I likely would have stopped trailing long ago, so I can't thank **Freesnow** enough for his work.
+* None of this would have been possible without the original creation of TacO by **BoyC**.
 * The many **contributors and trail testers in the Tehs Trails discord** have continously pushed me to refine my work and keep producing content. Their support has meant the world to keeping the project going. 
 * Special thanks to **zotmer**, the other main developer of Tehs Trails who has provided countless improvements to my pack and always keeps me on my toes
 * And thanks to **all the other pack developers**, who I'm sure through some way or another have improved my workflow and given me more reasons to keep pushing the limit.

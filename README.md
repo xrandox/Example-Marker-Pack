@@ -1,6 +1,7 @@
 # Example-Marker-Pack
 
-This pack is meant to be a guide/follow-along for new pack makers to get their feet on the ground. Eventually I plan to have a video/series of videos to go along with it but for now it will just be with text.
+This pack is meant to be a guide/follow-along for new pack makers to get their feet on the ground. 
+Video Series here: https://youtube.com/playlist?list=PL6MXo86k3jIvGBXhkIKmtXMCkoG5KodOM
 
 ## **Contents**
 * [Getting Started](#getting-started)
